@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/23 15:04:45 by ywake            ###   ########.fr       */
+/*   Created: 2020/06/23 14:49:39 by ywake             #+#    #+#             */
+/*   Updated: 2020/06/23 15:03:02 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_isupper(int c);
-int		ft_islower(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-
-#endif
+int	ft_tolower(int c)
+{
+	if (ft_isupper(c) == 1)
+		return (c ^ 0x20);
+	else
+		return (c);
+}
