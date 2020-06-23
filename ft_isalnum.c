@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/23 14:34:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/06/23 12:57:58 by ywake             #+#    #+#             */
+/*   Updated: 2020/06/23 14:33:54 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isupper(int c);
-int		ft_islower(int c);
-
-#endif
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) == 1)
+		return (1);
+	else if (ft_isdigit(c) == 1)
+		return (1);
+	else
+		return (0);
+}
