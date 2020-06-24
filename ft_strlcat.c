@@ -6,13 +6,20 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 15:11:21 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/24 16:13:04 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/24 16:44:19 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+static size_t	min(size_t a, size_t b)
+{
+	if (a > b)
+		return (b);
+	return (a);
+}
+
+size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	i;
@@ -27,5 +34,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-	return (MIN(dstlen, dstsize) + ft_strlen(src));
+	return (min(dstlen, dstsize) + ft_strlen(src));
 }
