@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/24 11:47:57 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/24 16:41:12 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 
+void	*ft_memset(void *b, int c, size_t len);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
