@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/06/23 18:04:44 by ywake            ###   ########.fr        #
+#    Updated: 2020/06/24 10:01:06 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,12 @@ OBJ= $(SRC:%.c,%.o)
 
 all: $(NAME)
 
-.c.o:
-	gcc $(FLAG) -c $< -o
-
 $(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(SRC) $(OBJ)
 	ar rc $(NAME) $(OBJ)
-	runlib $(NAME)
-	# ↑インデックスを作って高速化する
+
+clean:
+
+fclean:
+
+re:
