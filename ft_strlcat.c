@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 15:11:21 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/23 16:35:40 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/24 16:13:04 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-	return (dstlen + ft_strlen(src));
+	return (MIN(dstlen, dstsize) + ft_strlen(src));
 }
