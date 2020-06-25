@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/06/24 17:47:00 by ywake            ###   ########.fr        #
+#    Updated: 2020/06/25 18:29:23 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,14 +24,14 @@ OBJBONUS= $(BONUS:%.c=%.o)
 
 all: $(NAME)
 
-.c.o:
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(OBJBONUS)
-	ar rcs $(NAME) $(OBJ) $(OBJBONUS)
+bonus: $(OBJBONUS)
+	ar rcs $(NAME) $(OBJBONUS)
 
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
