@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/06/27 05:54:35 by ywake            ###   ########.fr        #
+#    Updated: 2020/06/27 06:14:17 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,11 @@ CC=gcc
 INCLUDE=-I./
 CFLAGS = -Wall -Werror -Wextra $(INCLUDE)
 SRCDIR = ./
-SRC = ft_strlen.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c ft_memset.c ft_memcpy.c ft_memchr.c ft_memccpy.c ft_bzero.c ft_memcmp.c ft_memmove.c ft_atoi.c ft_calloc.c ft_strdup.c
+SRC = ft_strlen.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c\
+	ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c ft_strlcat.c\
+	ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c ft_memset.c ft_memcpy.c\
+	ft_memchr.c ft_memccpy.c ft_bzero.c ft_memcmp.c ft_memmove.c ft_atoi.c\
+	ft_calloc.c ft_strdup.c
 BONUS = ft_isupper.c ft_islower.c ft_isspace.c
 OBJ= $(SRC:%.c=%.o)
 OBJBONUS= $(BONUS:%.c=%.o)
