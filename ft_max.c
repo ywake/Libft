@@ -6,13 +6,13 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 06:48:18 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/27 14:45:05 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/27 18:38:29 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t a, size_t b)
+size_t	ft_max(size_t a, size_t b)
 {
 	if (a > b)
 		return (a);
