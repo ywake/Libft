@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 17:25:26 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/27 23:24:36 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/28 01:45:00 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ char		**ft_split(char const *s, char c)
 	tmp = (char *)s;
 	i = 0;
 	while (*tmp)
-		(*tmp++ == c && *tmp != c && *tmp != '\0') ? i++ : 0;
+		if (*tmp++ == c && *tmp != c && *tmp != '\0')
+			i++;
 	buf = (char **)ft_calloc(i + 2, sizeof(char *));
-	(buf != NULL) ? buf[i + 2] = NULL : 0;
 	i = 0;
 	while (buf != NULL && (tmp = ft_strchr(s, c)))
 	{
@@ -51,7 +51,7 @@ char		**ft_split(char const *s, char c)
 				buf = free_all(buf);
 		s += len + 1;
 	}
-	if (buf != NULL)
-		(*s != '\0' || i == 0) ? buf[i++] = ft_substr(s, 0, ft_strlen(s)) : 0;
+	if (buf != NULL && (*s != '\0' || i == 0))
+		buf[i++] = ft_substr(s, 0, ft_strlen(s));
 	return (buf);
 }
