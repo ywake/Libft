@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/06/29 03:02:33 by ywake            ###   ########.fr        #
+#    Updated: 2020/06/29 03:09:49 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC = ft_strlen.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c\
 	ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 	ft_putnbr_fd.c
 BONUS = ft_isupper.c ft_islower.c ft_isspace.c ft_min.c ft_max.c ft_lstnew.c\
-	ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c
+	ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+	ft_lstdelone.c ft_lstclear.c
 OBJ= $(SRC:%.c=%.o)
 OBJBONUS= $(BONUS:%.c=%.o)
 
