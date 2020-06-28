@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/24 17:40:47 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/24 17:55:22 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/29 04:22:39 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t	i;
 	char	*csrc;
 
 	csrc = (char *)s;

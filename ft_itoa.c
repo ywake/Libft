@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:39:57 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/28 01:31:31 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/29 04:21:38 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_itoa(int n)
 	int		sign;
 	char	*buf;
 
-	digit = (n < 0) ?  2 : 1;
-	sign = (n < 0) ?  -1 : 1;
+	digit = (n < 0) ? 2 : 1;
+	sign = (n < 0) ? -1 : 1;
 	t = n;
 	while (t /= 10)
 		digit++;
@@ -35,5 +35,5 @@ char	*ft_itoa(int n)
 			buf[--digit] = n % 10 * sign + '0';
 		n /= 10;
 	}
-	return buf;
+	return (buf);
 }

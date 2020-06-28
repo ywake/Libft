@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 02:18:42 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/29 02:48:34 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/29 04:22:11 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	lst->next = NULL;
 	free(lst);
 }
-
