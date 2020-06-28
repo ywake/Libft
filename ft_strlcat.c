@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 15:11:21 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/27 07:04:35 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/28 14:39:43 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	dstlen = ft_strlen(dst);
-	if (dstsize == 0)
-		return (ft_strlen(src));
+	if (dstlen >= dstsize)
+		return (dstsize + ft_strlen(src));
 	i = 0;
 	while (src[i] && dstlen + i < dstsize - 1)
 	{
@@ -27,5 +27,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-	return (ft_min(dstlen, dstsize) + ft_strlen(src));
+	return (dstlen + ft_strlen(src));
 }
