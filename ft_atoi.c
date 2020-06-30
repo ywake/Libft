@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 03:06:33 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/27 04:57:24 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/30 12:38:24 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int			ft_atoi(const char *str)
 
 	src = (char *)str;
 	rtn = 1;
-	while (ft_isspace(*src))
+	while (('\t' <= *src && *src <= '\r') || *src == ' ')
 		src++;
 	if (*src == '+' || *src == '-')
 		rtn = 44 - *src++;
