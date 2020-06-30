@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 14:49:39 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/23 14:55:01 by ywake            ###   ########.fr       */
+/*   Updated: 2020/06/30 12:37:28 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (ft_islower(c) == 1)
+	if ('a' <= c && c <= 'z')
 		return (c ^ 0x20);
 	else
 		return (c);
