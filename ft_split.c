@@ -6,12 +6,11 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 17:25:26 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/30 13:53:30 by ywake            ###   ########.fr       */
+/*   Updated: 2020/07/01 14:12:22 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	**free_all(char **buf)
 {
