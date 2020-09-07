@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 17:25:26 by ywake             #+#    #+#             */
-/*   Updated: 2020/07/02 14:57:03 by ywake            ###   ########.fr       */
+/*   Updated: 2020/09/07 17:21:52 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char		**ft_split(char const *s, char c)
 	size_t		i;
 	size_t		len;
 
+	if (s == NULL)
+		return (NULL);
 	ptr = s;
 	i = 1;
 	while (*ptr)
