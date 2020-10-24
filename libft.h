@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/07/02 15:00:11 by ywake            ###   ########.fr       */
+/*   Updated: 2020/09/27 01:31:59 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,12 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
+
+int				ft_strchr_i(const char *s, int c);
+void			free_set(char **dst, char *src);
+int				ft_strmap_bool(char const *s, int (*f)(int));
+size_t			ft_strcount(char **s);
+char			*ft_strndup(const char *s1, size_t n);
+int				ft_printf(const char *str, ...);
 
 #endif

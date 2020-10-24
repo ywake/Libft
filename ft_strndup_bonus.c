@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:46:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/06/27 05:49:41 by ywake             #+#    #+#             */
+/*   Updated: 2020/09/20 01:41:22 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	int i;
+	char	*ptr;
+	size_t	len;
+	size_t	i;
 
-	if (s == NULL)
+	if (s1 == NULL)
+		return (NULL);
+	len = 0;
+	while (s1[len] != '\0')
+		len++;
+	len = (len < n) ? len : n;
+	if ((ptr = (char *)malloc(len + 1 * sizeof(char))) == NULL)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (s1[i] != '\0' && i < len)
 	{
-		if (s[i] == c)
-			return ((char *)(s + i));
+		ptr[i] = s1[i];
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	ptr[i] = 0;
+	return (ptr);
 }

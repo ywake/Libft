@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   print_n.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:46:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/07/17 14:32:23 by ywake             #+#    #+#             */
+/*   Updated: 2020/07/26 00:58:28 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	print_n(int *n, t_info *info, size_t *len)
 {
-	int i;
-
-	if (s == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i++;
-	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	(void)info;
+	*n = *len;
 }

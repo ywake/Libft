@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmap_bool.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:46:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/06/28 11:50:53 by ywake             #+#    #+#             */
+/*   Updated: 2020/09/17 22:09:37 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_strmap_bool(char const *s, int (*f)(int))
 {
-	int i;
+	unsigned int	i;
+	int				rtn;
 
-	if (s == NULL)
-		return (NULL);
+	if (s == NULL || f == NULL)
+		return (-1);
+	rtn = 1;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)(s + i));
+		rtn &= f((int)s[i]);
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	return (rtn);
 }

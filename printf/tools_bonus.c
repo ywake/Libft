@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:46:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/07/20 02:50:33 by ywake             #+#    #+#             */
+/*   Updated: 2020/09/27 12:38:55 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		max(int a, int b)
 {
-	int i;
+	if (a > b)
+		return (a);
+	return (b);
+}
 
-	if (s == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
+int		abs_p(int *p)
+{
+	if (*p < 0)
 	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i++;
+		*p *= -1;
+		return (1);
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	return (0);
 }

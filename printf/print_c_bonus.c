@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   print_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:46:23 by ywake            ###   ########.fr       */
+/*   Created: 2020/07/17 14:32:23 by ywake             #+#    #+#             */
+/*   Updated: 2020/07/22 20:16:28 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	put_char_count(char c, size_t *len)
 {
-	int i;
+	ft_putchar_fd(c, 1);
+	(*len)++;
+}
 
-	if (s == NULL)
-		return (NULL);
+void	print_c(char c, t_info *info, size_t *len)
+{
+	char	*field;
+	int		i;
+
+	field = make_field(info, 1);
+	if (info->flag & LEFT_JUSTIFIED)
+		field[0] = c;
+	else
+		field[info->width - 1] = c;
 	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)(s + i));
-		i++;
-	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	while (i < info->width)
+		put_char_count(field[i++], len);
+	free(field);
 }
