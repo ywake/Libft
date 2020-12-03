@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/03 15:59:09 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/04 04:33:58 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,11 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
-void			ft_lstsort(t_list **lst, int (*cmp)());
+
+t_list			*ft_lst_at(t_list *lst, size_t nbr);
+void			ft_lst_reverse(t_list **lst);
+t_list			*ft_lst_merge(t_list *lst, size_t nbr);
+t_list			*ft_lst_sort(t_list *lst, int (*cmp)());
 
 int				ft_strchr_i(const char *s, int c);
 void			free_set(void **dst, void *src);
