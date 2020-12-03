@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 03:19:44 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/29 03:25:06 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/04 04:08:46 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
 		return ;
-	ft_lstiter(lst->next, f);
 	f(lst->content);
+	ft_lstiter(lst->next, f);
 }
