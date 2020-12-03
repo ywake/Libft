@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/04 05:02:51 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/04 06:56:17 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ void			free_set(void **dst, void *src);
 int				ft_strmap_bool(char const *s, int (*f)(int));
 size_t			ft_strcount(char **s);
 char			*ft_strndup(const char *s1, size_t n);
+int				ft_strcmp(const char *s1, const char *s2);
 
 #endif
