@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/12/04 02:13:05 by ywake            ###   ########.fr        #
+#    Updated: 2020/12/04 02:34:07 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 OBJ= $(SRC:%.c=%.o)
 OBJBONUS= $(BONUS:%.c=%.o)
 
-.PHONY: all $(NAME) clean fclean re bonus
+.PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
