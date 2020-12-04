@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/12/04 06:56:28 by ywake            ###   ########.fr        #
+#    Updated: 2020/12/04 09:16:53 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(OBJBONUS)
-	ar rcs $(NAME) $(OBJ) $(OBJBONUS)
+bonus: $(NAME) $(OBJBONUS)
+	ar rcs $(NAME) $(OBJBONUS)
 
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
