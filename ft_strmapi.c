@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 11:50:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/07 17:23:08 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/09 03:33:01 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == NULL || f == NULL)
 		return (NULL);
 	i = (unsigned int)ft_strlen(s);
-	buf = (char *)ft_calloc(i + 1, sizeof(char));
+	buf = (char *)malloc(sizeof(char) * (i + 1));
 	if (buf == NULL)
 		return (NULL);
 	i = 0;
@@ -29,5 +29,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		buf[i] = f(i, s[i]);
 		i++;
 	}
+	buf[i] = '\0';
 	return (buf);
 }

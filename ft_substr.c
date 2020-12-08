@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 06:24:49 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/30 12:49:14 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/09 03:32:30 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	bufsize = 0;
 	if (ft_strlen(s) > start)
 		bufsize = min(ft_strlen(s) - start, len);
-	buf = (char *)ft_calloc(bufsize + 1, sizeof(char));
+	buf = (char *)malloc(sizeof(char) * (bufsize + 1));
 	if (buf == NULL)
 		return (NULL);
 	i = 0;
@@ -37,5 +37,6 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 		buf[i] = s[start + i];
 		i++;
 	}
+	buf[i] = '\0';
 	return (buf);
 }

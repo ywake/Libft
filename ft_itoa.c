@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:39:57 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/29 04:21:38 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/09 03:32:30 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,10 @@ char	*ft_itoa(int n)
 	t = n;
 	while (t /= 10)
 		digit++;
-	buf = (char *)ft_calloc(digit + 1, sizeof(char));
+	buf = (char *)malloc(sizeof(char) * (digit + 1));
 	if (buf == NULL)
 		return (NULL);
+	buf[digit] = '\0';
 	while (digit > 0)
 	{
 		if (n == 0 && sign < 0)
