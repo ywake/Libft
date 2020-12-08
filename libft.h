@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/04 06:56:17 by ywake            ###   ########.fr       */
+/*   Updated: 2020/12/09 03:17:28 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,21 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
 t_list			*ft_lstnew(void *content);
+/*
+** ft_lstadd_front: O(1)
+*/
 void			ft_lstadd_front(t_list **lst, t_list *new);
+/*
+** ft_lstsize: O(n)
+*/
 int				ft_lstsize(t_list *lst);
+/*
+** ft_lstlast: O(n)
+*/
 t_list			*ft_lstlast(t_list *lst);
+/*
+** ft_lstadd_back: O(n)
+*/
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
@@ -72,8 +84,14 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
 
 t_list			*ft_lst_at(t_list *lst, size_t nbr);
+/*
+** ft_lst_reverse: O(n)
+*/
 void			ft_lst_reverse(t_list **lst);
-t_list			*ft_lst_sort(t_list *lst, int (*cmp)());
+/*
+** ft_lst_sort: O(n*log(n))
+*/
+void			ft_lst_sort(t_list **lst, int (*cmp)());
 
 int				ft_strchr_i(const char *s, int c);
 void			free_set(void **dst, void *src);
