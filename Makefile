@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2020/12/04 09:16:53 by ywake            ###   ########.fr        #
+#    Updated: 2021/02/03 17:44:50 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC		:= ft_strlen.c ft_strlcpy.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isasc
 BONUS	:= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_strmap_bool_bonus.c ft_strcount_bonus.c ft_strndup_bonus.c free_set_bonus.c ft_strchr_i_bonus.c ft_lst_at_bonus.c ft_lst_reverse_bonus.c ft_lst_sort_bonus.c ft_strcmp_bonus.c
 OBJ		:= $(SRC:%.c=%.o)
 OBJBONUS:= $(BONUS:%.c=%.o)
+BONUSFLG:= .bonus_flg
 
 .PHONY: all clean fclean re bonus
 
@@ -29,7 +30,10 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(NAME) $(OBJBONUS)
+bonus: $(BONUSFLG)
+
+$(BONUSFLG): $(NAME) $(OBJBONUS)
+	@touch $(BONUSFLG)
 	ar rcs $(NAME) $(OBJBONUS)
 
 clean:
