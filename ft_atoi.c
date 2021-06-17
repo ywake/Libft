@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 03:06:33 by ywake             #+#    #+#             */
-/*   Updated: 2020/10/23 02:29:37 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:01:42 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_pow10(int n)
 {
-	int rtn;
+	int	rtn;
 
 	rtn = 1;
 	while (n-- > 0)
@@ -32,7 +32,7 @@ static int	str_to_int(char *str, int len)
 	return (rtn);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	char	*src;
 	int		rtn;

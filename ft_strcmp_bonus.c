@@ -6,13 +6,13 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 06:46:52 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/04 07:49:07 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:01:58 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	size_t	i;
 

@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 03:38:59 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/30 13:38:30 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:08:45 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *elem;
-	t_list *new_list;
+	t_list	*elem;
+	t_list	*new_list;
 
 	if (lst == NULL || f == NULL)
 		return (NULL);

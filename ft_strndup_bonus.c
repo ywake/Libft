@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_strndup_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 05:49:41 by ywake             #+#    #+#             */
-/*   Updated: 2020/09/20 01:41:22 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:06:02 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ char	*ft_strndup(const char *s1, size_t n)
 	len = 0;
 	while (s1[len] != '\0')
 		len++;
-	len = (len < n) ? len : n;
-	if ((ptr = (char *)malloc(len + 1 * sizeof(char))) == NULL)
+	if (len >= n)
+		len = n;
+	ptr = (char *)malloc(len + 1 * sizeof(char));
+	if (ptr == NULL)
 		return (NULL);
 	i = 0;
 	while (s1[i] != '\0' && i < len)

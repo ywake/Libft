@@ -6,24 +6,34 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 23:39:57 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/09 03:32:30 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:43:21 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <math.h>
+
+static int	get_digit(int n)
+{
+	int	digit;
+
+	digit = (n <= 0);
+	while (n)
+	{
+		digit++;
+		n /= 10;
+	}
+	return (digit);
+}
 
 char	*ft_itoa(int n)
 {
-	int		t;
 	int		digit;
 	int		sign;
 	char	*buf;
 
-	digit = (n < 0) ? 2 : 1;
-	sign = (n < 0) ? -1 : 1;
-	t = n;
-	while (t /= 10)
-		digit++;
+	sign = 1 - 2 * (n < 0);
+	digit = get_digit(n);
 	buf = (char *)malloc(sizeof(char) * (digit + 1));
 	if (buf == NULL)
 		return (NULL);

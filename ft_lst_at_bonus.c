@@ -6,13 +6,13 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 04:34:36 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/04 04:40:05 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:11:13 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lst_at(t_list *lst, size_t nbr)
+t_list	*ft_lst_at(t_list *lst, size_t nbr)
 {
 	while (nbr--)
 		lst = lst->next;

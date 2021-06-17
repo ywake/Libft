@@ -6,13 +6,13 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 04:35:06 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/09 02:21:23 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:09:28 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_lst_reverse(t_list **lst)
+void	ft_lst_reverse(t_list **lst)
 {
 	t_list	*first_one;
 	t_list	*ans;

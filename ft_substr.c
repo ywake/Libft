@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/27 06:24:49 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/09 03:32:30 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:06:41 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	min(size_t a, size_t b)
 	return (a);
 }
 
-char			*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buf;
 	size_t	bufsize;

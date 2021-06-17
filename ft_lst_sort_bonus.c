@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 04:21:21 by ywake             #+#    #+#             */
-/*   Updated: 2020/12/09 02:19:56 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 22:08:20 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static t_list	*ft_lst_sort_re(t_list *left, int size, int (*cmp)())
 	return (ans);
 }
 
-void			ft_lst_sort(t_list **list, int (*cmp)())
+void	ft_lst_sort(t_list **list, int (*cmp)())
 {
 	int	size;
 

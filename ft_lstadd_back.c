@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 20:48:18 by ywake             #+#    #+#             */
-/*   Updated: 2020/06/29 02:56:54 by ywake            ###   ########.fr       */
+/*   Updated: 2021/06/17 21:42:15 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *current;
+	t_list	*current;
 
 	if (lst == NULL || new == NULL)
 		return ;
