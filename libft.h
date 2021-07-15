@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2021/07/05 19:22:36 by ywake            ###   ########.fr       */
+/*   Updated: 2021/07/15 10:07:11 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,5 +104,7 @@ int		ft_strcmp(const char *s1, const char *s2);
 char	*set_rtn(char **dest, char *source);
 int		set_rtn_int(int *dest, int source);
 long	set_rtn_long(long *dest, long source);
+size_t	ft_min(size_t a, size_t b);
+size_t	ft_max(size_t a, size_t b);
 
 #endif
