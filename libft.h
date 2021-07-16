@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2021/07/15 10:07:11 by ywake            ###   ########.fr       */
+/*   Updated: 2021/07/17 02:13:59 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void	ft_lst_reverse(t_list **lst);
 */
 void	ft_lst_sort(t_list **lst, int (*cmp)());
 t_list	*ft_lstndup(t_list *list, size_t n);
+size_t	ft_lstget_index(t_list *head, t_list *target);
 
 int		ft_strchr_i(const char *s, int c);
 void	free_set(void **dst, void *src);

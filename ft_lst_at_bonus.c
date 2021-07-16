@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 04:34:36 by ywake             #+#    #+#             */
-/*   Updated: 2021/06/17 22:11:13 by ywake            ###   ########.fr       */
+/*   Updated: 2021/07/17 02:24:45 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lst_at(t_list *lst, size_t nbr)
 {
-	while (nbr--)
+	while (lst && nbr--)
 		lst = lst->next;
 	return (lst);
 }
