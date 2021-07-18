@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:16:53 by ywake             #+#    #+#             */
-/*   Updated: 2021/07/18 02:22:06 by ywake            ###   ########.fr       */
+/*   Updated: 2021/07/18 11:52:35 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,6 @@ int		set_rtn_int(int *dest, int source);
 long	set_rtn_long(long *dest, long source);
 size_t	ft_min(size_t a, size_t b);
 size_t	ft_max(size_t a, size_t b);
+int		contain(char **array, char *str);
 
 #endif
