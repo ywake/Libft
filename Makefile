@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2022/02/27 11:22:56 by ywake            ###   ########.fr        #
+#    Updated: 2022/02/27 12:26:28 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,24 +44,12 @@ fclean: clean
 
 re: fclean all
 
-Libftest:
-	git clone https://github.com/jtoty/Libftest.git
+TESTER := libft-unit-test
 
-Libftest/my_config.sh: Libftest
-	@printf $(CONFIG) > Libftest/my_config.sh
+$(TESTER):
+	git clone https://github.com/alelievr/libft-unit-test $(TESTER)
+	sed -i '' 's|LIBFTDIR\t=\t../libft|LIBFTDIR\t=\t../|' $(TESTER)/Makefile
 
-test: Libftest Libftest/my_config.sh
-	bash Libftest/grademe.sh -n $(FUNC)
-
-CONFIG := '\
-	\#!/bin/bash\n\
-	PATH_LIBFT=..\n\
-	PATH_DEEPTHOUGHT=$${PATH_TEST}\n\
-	COLOR_OK="$${GREEN}"\n\
-	COLOR_FAIL="$${RED}"\n\
-	COLOR_WARNING="$${YELLOW}"\n\
-	COLOR_TITLE="$${BOLD}$${BLUE}"\n\
-	COLOR_FUNC="$${CYAN}"\n\
-	COLOR_PART="$${UNDERLINE}$${PURPLE}"\n\
-	COLOR_TOTAL="$${BOLD}$${YELLOW}"\n\
-	COLOR_DEEPTHOUGHT_PATH="$${BOLD}$${PURPLE}"'
+test: $(TESTER)
+	make f -C $(TESTER)
+	cat $(TESTER)/result.log | grep -E '(\[KO\]|\[CRASH\])' && false
