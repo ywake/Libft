@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 16:57:15 by ywake             #+#    #+#             */
-/*   Updated: 2021/06/17 22:10:59 by ywake            ###   ########.fr       */
+/*   Updated: 2022/02/27 12:29:34 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if (s == NULL)
-		return (NULL);
 	i = 0;
 	while (s[i])
 	{

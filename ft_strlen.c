@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:15:41 by ywake             #+#    #+#             */
-/*   Updated: 2021/06/17 22:13:31 by ywake            ###   ########.fr       */
+/*   Updated: 2022/02/27 12:29:21 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
-	if (s == NULL)
-		return (0);
 	len = 0;
 	while (s[len])
 		len++;
