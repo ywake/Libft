@@ -6,7 +6,7 @@
 #    By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/22 15:19:36 by ywake             #+#    #+#              #
-#    Updated: 2022/02/27 12:26:28 by ywake            ###   ########.fr        #
+#    Updated: 2022/02/27 16:24:45 by ywake            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,9 +46,15 @@ re: fclean all
 
 TESTER := libft-unit-test
 
+ifeq ($(shell uname), Darwin)
+SEDARG = -i ''
+else
+SEDARG = -i
+endif
+
 $(TESTER):
-	git clone https://github.com/alelievr/libft-unit-test $(TESTER)
-	sed -i '' 's|LIBFTDIR\t=\t../libft|LIBFTDIR\t=\t../|' $(TESTER)/Makefile
+	git clone https://github.com/alelievr/libft-unit-test $(TESTER)\
+	&& sed $(SEDARG) 's|LIBFTDIR\t=\t../libft|LIBFTDIR\t=\t../|' $(TESTER)/Makefile
 
 test: $(TESTER)
 	make f -C $(TESTER)
