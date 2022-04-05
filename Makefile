@@ -98,7 +98,8 @@ bonus_leak: bonus_$(shell uname)_leak
 # Test rules #
 ##############
 
-test: 
+test: bonus
+	$(MAKE) -C ../libft-test
 
 ##########
 # Colors #
